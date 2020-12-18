@@ -1,0 +1,12 @@
+.tr-style td{
+    color: white!important;
+}
+
+@media only screen and (max-width: 600px) {
+    .td-style-56{
+        font-size: 12px !important;
+    }
+    .tr-57 th {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,44 @@
+.navbar-container-88 {
+    height: 60px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 99;
+}
+
+.navbar-content-88 {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-content-88 span {
+    color: #0033FF;
+    font-weight: bold;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.navbar-circle-88 {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 0.2px solid#0033FF;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-circle-88 img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}

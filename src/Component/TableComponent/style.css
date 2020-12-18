@@ -1,0 +1,12 @@
+.not-found-movie {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.not-found-movie span {
+    color:  #0033FF;
+    font-size: 20px;
+}

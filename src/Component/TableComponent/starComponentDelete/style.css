@@ -1,0 +1,9 @@
+.star-delete {
+    cursor: pointer;
+    font-size: 30px;
+    cursor: pointer;
+    /* color: black; */
+    border-radius: 100%;
+    animation-name: example;
+    /* animation-duration: 1s; */
+}

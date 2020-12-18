@@ -37,6 +37,11 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+    .tab-header {
+        height: 55px;
+    }
+
     .tab-header-item span {
         font-size: 12px;
     }
@@ -45,5 +50,11 @@
     }
     .tab-header-item-selected {
         border-bottom: 3.5px solid #0033FF;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .tab-header {
+        height: 50px;
     }
 }

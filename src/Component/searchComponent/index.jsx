@@ -11,7 +11,7 @@ import { changeSearch } from '../../Redux/Actions'
 import searchIcon from '../../Images/icon.png'
 
 // STYLE
-import './style2.css'
+import './style.css'
 
 
 function SearcComponent () {

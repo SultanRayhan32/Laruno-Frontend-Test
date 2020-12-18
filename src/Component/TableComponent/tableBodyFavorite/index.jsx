@@ -9,6 +9,8 @@ import { changeDetail , setModal  } from '../../../Redux/Actions'
 
 function TableBody (props) {
 
+    console.log('SKFMDSKMFSKDMFSKDMKFKSDM')
+
 
     // LOCAL STATE
     const [num,setNum] = useState(0)

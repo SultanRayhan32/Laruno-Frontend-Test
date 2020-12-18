@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState } from 'react'
 
 // REDUX MODULE
 import {  useSelector  } from 'react-redux'
@@ -23,6 +23,9 @@ function TableComponent (props) {
         isSearch,
         selectedTab
     } = useSelector( state=> state.data)
+
+    // LOCAL STATE
+    const [dataFavorite] = useState(JSON.parse(localStorage.getItem('favorite')))
 
     if (selectedTab === 0 ) {
 
@@ -55,27 +58,47 @@ function TableComponent (props) {
                 // <div className="not-found-movie">
                 //     <span>The movie you are looking for was not found sfdff</span>
                 // </div>
-                <NotFoundPage/>
+                <NotFoundPage
+                    text={"The movie you are looking for was not found"}
+                    isBack={true}
+                />
             )
         }
     }
     else if (selectedTab === 1) {
-        return (
-            <table className="table table-borderless table-light">
-                <thead>
-                    <tr className="tr-57">
-                        <th scope="col" style={{color : "#0033FF"}}>Title</th>
-                        <th scope="col" style={{color : "#0033FF"}}>Year</th>
-                        <th scope="col" style={{color : "#0033FF"}}>ImDB Id</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                {
-                    type === "0" ?
-                    <TableBody/> : <TableBodyFavorite/>
-                }
-            </table>
-        )
+        if (!dataFavorite ) {
+            return (
+                <NotFoundPage
+                    text={"You don't have a favorite movie yet"}
+                    isBack={false}
+                />
+            )
+        }
+        else if (dataFavorite.length === 0) {
+            return (
+                <NotFoundPage
+                    text={"You don't have a favorite movie yet"}
+                    isBack={false}
+                />
+            )
+        }else {
+            return (
+                <table className="table table-borderless table-light">
+                    <thead>
+                        <tr className="tr-57">
+                            <th scope="col" style={{color : "#0033FF"}}>Title</th>
+                            <th scope="col" style={{color : "#0033FF"}}>Year</th>
+                            <th scope="col" style={{color : "#0033FF"}}>ImDB Id</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    {
+                        type === "0" ?
+                        <TableBody/> : <TableBodyFavorite/>
+                    }
+                </table>
+            )
+        }
     }
 
 

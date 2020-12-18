@@ -35,3 +35,26 @@
     width: 160px;
     height: 160px;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .nfp-container span  {
+        font-size: 16px;
+    }
+
+    .nfp-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nfp-container u {
+        font-size: 15px;
+    }
+
+    .nfp-container u img { 
+        width: 16px;
+        height: 16px;
+    }
+
+
+}

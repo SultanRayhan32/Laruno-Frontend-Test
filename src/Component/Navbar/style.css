@@ -42,3 +42,38 @@
     height: 20px;
     object-fit: contain;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .navbar-content-88 span {
+        font-size: 24px;
+    }
+
+    .navbar-circle-88 {
+        width: 26px;
+        height: 26px;
+    }
+
+    .navbar-circle-88 img {
+        width: 18px;
+        height: 18px;
+    }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+    .navbar-content-88 span {
+        font-size: 22px;
+    }
+
+    .navbar-circle-88 {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar-circle-88 img {
+        width: 16px;
+        height: 16px;
+    }
+}

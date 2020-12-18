@@ -5,7 +5,7 @@ import React from 'react'
 import { useDispatch  } from 'react-redux'
 
 // CALL GLOBAL ACTION
-import { getMovie , changeSearch } from '../../Redux/Actions'
+import { getMovie , changeSearch , changeTab } from '../../Redux/Actions'
 
 // STYLE
 import './style.css'
@@ -14,7 +14,11 @@ import './style.css'
 import svgImage from '../../Images/tes.svg'
 import backImage from '../../Images/back.png'
 
-function NotFoundPage () {
+function NotFoundPage (props) {
+
+    const {
+        text,isBack
+    } = props
 
     // CALL DISPATCH
     const dispatch = useDispatch()
@@ -27,11 +31,19 @@ function NotFoundPage () {
     return (
         <div className="nfp-container">
             <img src={svgImage} alt={'not-found'} className="nfp-image"/>
-            <span>The movie you are looking for was not found</span>
-            <u onClick={e=>handleBack()}> 
-                <img  src={backImage} alt={'back'}/>
-                Back
-            </u>
+            <span>{text}</span>
+            {
+                isBack ?
+                <u onClick={e=>handleBack()}> 
+                    <img  src={backImage} alt={'back'}/>
+                    Back
+                </u> :
+
+                <u onClick={e=>dispatch(changeTab(0))}> 
+                    <img  src={backImage} alt={'back'}/>
+                    Add Favorite
+                </u>
+            }
         </div>
     )
 
